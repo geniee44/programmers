@@ -1,27 +1,25 @@
 def solution(keymap, targets):
     answer = []
+    dict = {}
     
-    dict = {chr(i): 101 for i in range(ord('A'), ord('Z') + 1)}
-    
-    for word in keymap:
-        for letter in keymap:
-            if dict[letter] > word.index(letter):
-                dict[letter] = word.index(letter) + 1
-    
-    for key, val in dict:
-        if val == 101:
-            val = -1
-    
-    for word in targets:
-        result = 0
-        for letter in word:
-            if dic[letter] == -1:
-                answer.append(-1)
-                break
+    for key in keymap:
+        for i, letter in enumerate(key):
+            if letter in dict:
+                if dict[letter] > (i + 1):
+                    dict[letter] = i + 1
             else:
-                result += dic[letter]
+                dict[letter] = i + 1
+    
+    for target in targets:
+        num = 0
+        for letter in target:
+            if letter in dict:
+                num += dict[letter]
+            else:
+                num = -1
+                break
         
-        answer.append(result)
+        answer.append(num)
                 
     
     return answer
