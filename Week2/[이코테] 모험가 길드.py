@@ -1,4 +1,5 @@
 def solution(data):
+    data.sort()
     result = 0
     count = 0
     
