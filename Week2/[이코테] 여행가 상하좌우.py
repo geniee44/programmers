@@ -1,7 +1,7 @@
 def solution(n, plans):
     dx = [0, 0, -1, 1]
     dy = [1, -1, 0, 0]
-    move = {'R': 0, 'L': 1, 'D': 2, 'U': 3}
+    move = {'R': 0, 'L': 1, 'U': 2, 'D': 3}
     x, y = 1, 1
     
     for plan in plans:
