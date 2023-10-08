@@ -11,7 +11,7 @@ for _ in range(m):
   a, b, c = map(int, input().split(' ')
   graph[a].append((b, c))
 
-def dijstra(start):
+def dijkstra(start):
   q = []
   heapq.heappush(q, (0, start))
   distance[start] = 0
