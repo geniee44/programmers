@@ -13,7 +13,7 @@ for _ in range(1, v + 1):
 def find_parent(parent, x):
     if parent[x] != x:
         find_parent(parent, parent[x])
-    return x
+    return parent[x]
 
 def union_parent(a, b):
     if find_parent(a) < find_parent(b):
