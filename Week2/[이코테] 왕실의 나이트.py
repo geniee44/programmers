@@ -3,7 +3,7 @@ def solution(row, col):
     steps = [(-1, -2). (-1, 2), (1, -2), (1, 2), (-2, -1), (-2, 1), (2, -1), (2, 1)]
     result = 0
     r = row
-    c = int(ord(col) - int(ord('a')) + 1
+    c = int(ord(col)) - int(ord('a')) + 1
     
     for step in steps:
         new_row = r + step[0]
