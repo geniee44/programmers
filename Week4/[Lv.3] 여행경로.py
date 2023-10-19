@@ -1,3 +1,5 @@
+# dfs로 수정 필요
+
 def solution(tickets):
     answer = []
     tickets = sorted(tickets)
