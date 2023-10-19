@@ -8,15 +8,15 @@ def solution(n, wires):
         
         while stack:
             now = stack.pop()
-            for a, b in saveWires:
-                if a == now and a not in sett:
-                    sett.append(a)
-                    stack.append(a)
-                if b == now and b not in sett:
-                    sett.append(b)
-                    stack.append(b)
+            for wire in saveWires:
+                if wire[0] == now and wire[1] not in sett:
+                    sett.append(wire[1])
+                    stack.append(wire[1])
+                if wire[1] == now and wire[0] not in sett:
+                    sett.append(wire[0])
+                    stack.append(wire[0])
         
         answer = min(answer, abs(n - 2 * len(sett)))
-    
+
     return answer
 
